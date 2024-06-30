@@ -14,13 +14,13 @@ export class PostService {
     published,
   }: PostDTO): Promise<string> {
     try {
-      console.log('post', {
-        title,
-        assets,
-        content,
-        authorId,
-        published,
-      });
+      // console.log('post', {
+      //   title,
+      //   assets,
+      //   content,
+      //   authorId,
+      //   published,
+      // });
       await this.prisma.post.create({
         data: {
           title,

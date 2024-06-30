@@ -11,9 +11,12 @@ import { PostService } from './post/post.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { PrismaService } from './prisma/prisma.service';
 
+import { AssetModule } from './upload/asset.module';
+import { AssetService } from './upload/asset.service';
+
 @Module({
-  imports: [AuthModule, PrismaModule, PostModule],
+  imports: [AuthModule, PrismaModule, PostModule, AssetModule],
   controllers: [AppController],
-  providers: [AppService, PrismaService, PostService],
+  providers: [AppService, PrismaService, PostService, AssetService],
 })
 export class AppModule {}
